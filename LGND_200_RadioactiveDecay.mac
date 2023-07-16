@@ -1,0 +1,37 @@
+/MG/manager/mglog routine
+/MG/eventaction/reportingfrequency 10000
+/MG/manager/seedWithUUID
+/MG/processes/realm BBdecay
+/MG/processes/lowenergy true
+/MG/processes/useAllHP true
+/MG/processes/useAngCorr
+/MG/processes/storeICLevelData true
+/MG/geometry/detector LGND_200_Baseline
+/MG/geometry/WorldMaterial Vacuum
+/MG/L200/MakeSiPlatePEN true
+/MG/L200/SetSensitiveVolumePEN true
+/MG/L200/SetSensitiveVolumeFiberCore true
+
+/MG/eventaction/rootschema MCRun
+/MG/eventaction/rootfilename /tmp/LGND200Baseline_bulk_A224_Z88_from_A224_Z88_to_A208_Z81_in_DUCopper_200000_65372.root
+
+/MG/io/MCRun/SetSensitiveIDLabelScheme askGeom
+/MG/io/MCRun/setRunID 65372
+/MG/io/MCRun/setWriteAllSteps false
+/MG/io/MCRun/setWriteEventsThatDepositEnergyInGe false
+
+/MG/io/MCRun/useTimeWindow true
+/MG/io/MCRun/setTimeWindow 86400 second
+/run/initialize
+/MG/generator/select RDMiso
+/gun/energy 0 eV
+/grdm/ion 224 88 0
+/grdm/nucleusLimits 208 224 81 88
+/MG/generator/confine volumearray
+/MG/generator/volumearrayadd DetectorArray_001_StringAssembly_001_DetUnit_001_SupportRod_001
+/MG/generator/volumearrayadd DetectorArray_001_StringAssembly_011_DetUnit_012_SupportRod_003
+/MG/generator/volumearrayadd DetectorArray_001_StringAssembly_011_DetUnit_013_SupportRod_001
+/MG/generator/volumearrayadd DetectorArray_001_StringAssembly_011_DetUnit_013_SupportRod_002
+/MG/generator/volumearrayadd DetectorArray_001_StringAssembly_011_DetUnit_013_SupportRod_003
+
+/run/beamOn 200000 

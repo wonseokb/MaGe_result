@@ -1,0 +1,29 @@
+/MG/manager/mglog routine
+/MG/manager/seedWithUUID
+/MG/processes/realm BBdecay
+/MG/processes/lowenergy false
+/MG/processes/opticalOnly true
+/MG/geometry/detector LGND_200_Baseline
+/MG/L200/RadonShroudRadius 700 mm
+/MG/L200/SetSensitiveVolumeArgon false
+/MG/L200/SetSensitiveVolumeGermanium false
+/MG/L200/SetSensitiveVolumeSiPM true
+/MG/L200/SetSensitiveVolumePEN false
+/MG/L200/MakeSiPlatePEN true
+/run/initialize
+/MG/eventaction/rootschema MCOpticalRun
+/MG/eventaction/reportingfrequency 10
+/MG/eventaction/rootfilename LGND_200_Baseline_LGNDLiquidArgon_100.root
+/MG/io/MCOpticalRun/SetSensitiveIDLabelScheme askGeom
+/MG/io/MCOpticalRun/setRunID 001
+/MG/io/MCOpticalRun/useTimeWindow true
+/MG/io/MCOpticalRun/setTimeWindow 86400 second
+/MG/io/MCOpticalRun/setNSteps 10000000000000
+/MG/generator/select LGNDLiquidArgon
+/MG/generator/LGNDLiquidArgon/SetRadiusMin 0. mm
+/MG/generator/LGNDLiquidArgon/SetRadiusMax 500. mm
+/MG/generator/LGNDLiquidArgon/SetHeight 490.000000 mm
+/MG/generator/LGNDLiquidArgon/SetCenterVector 0.0 0.0 0.0 mm
+/MG/generator/LGNDLiquidArgon/SetNParticles 1
+/MG/generator/LGNDLiquidArgon/SetBinWidth 5 mm
+/run/beamOn 500

@@ -1,0 +1,32 @@
+/MG/geometry/detector LGND_200_Baseline
+/MG/geometry/WorldMaterial Vacuum
+/MG/L200/MakeSiPlatePEN true
+/MG/processes/useNoHadPhysics true
+/run/initialize
+/vis/open VRML1FILE
+/vis/viewer/set/autoRefresh false
+/vis/verbose errors
+/vis/viewer/set/upVector 0 0 1
+#/vis/geometry/set/visibility World 0 false
+/vis/viewer/set/style surface
+/vis/viewer/set/hiddenMarker true
+/vis/viewer/set/viewpointThetaPhi
+/vis/viewer/set/lineSegmentsPerCircle 100
+/vis/viewer/zoom 40
+/vis/drawVolume
+/vis/scene/add/axes 0 0.0 0 0.5 m
+/vis/viewer/flush
+/vis/scene/add/trajectories smooth
+/vis/scene/add/hits
+# To superimpose all of the events from a given run:
+/vis/scene/endOfEventAction accumulate
+/vis/viewer/update
+/MG/generator/select RDMi so
+/gun/energy 0 eV
+/grdm/ion 40 19 0
+/MG/generator/confine volumearray
+/MG/generator/volumearrayadd DetectorArray_001_StringAssembly_001_DetUnit_001_ActiveDet_001 #Cryostat_001
+#/MG/generator/volume DetectorArray_001_StringAssembly_008_DetUnit_013_SiPlate_001
+/run/beamOn 1
+/vis/ASCIITree/verbose 13
+/vis/drawTree

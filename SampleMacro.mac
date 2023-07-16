@@ -1,0 +1,26 @@
+/MG/manager/mglog routine
+/MG/eventaction/reportingfrequency 10000
+/MG/manager/seedWithUUID
+/MG/processes/realm BBdecay
+/MG/processes/lowenergy true
+/MG/processes/useAllHP true
+/MG/processes/useAngCorr
+/MG/processes/storeICLevelData true
+/MG/geometry/detector LGND_1T_Baseline
+/MG/geometry/WorldMaterial Vacuum
+/MG/eventaction/rootschema MCRun
+/MG/eventaction/rootfilename A224_Z88_in_DUCopper_Single.root
+/MG/io/MCRun/SetSensitiveIDLabelScheme askGeom
+/MG/io/MCRun/setRunID 68733
+/MG/io/MCRun/useTimeWindow true
+/MG/io/MCRun/setTimeWindow 86400 second
+/MG/L1000/SetSensitiveVolumePEN true
+/MG/L1000/MakeSiPlatePEN true
+/run/initialize
+/MG/generator/select RDMiso
+/gun/energy 0 eV
+/grdm/ion 224 88 0
+/grdm/nucleusLimits 208 224 81 88
+/MG/generator/confine volume
+/MG/generator/volume DetectorArray_001_StringAssembly_001_DetUnit_001_SupportRod_001
+/run/beamOn 10000
